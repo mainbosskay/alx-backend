@@ -20,12 +20,12 @@ class MRUCache(BaseCaching):
                 mruKey, _ = self.cache_data.popitem(False)
                 print("DISCARD:", mruKey)
             self.cache_data[key] = item
-            self.cache_data.move_tothe_end(key, last=False)
+            self.cache_data.move_to_end(key, last=False)
         else:
             self.cache_data[key] = item
 
     def get(self, key):
         """Getting an item from cache using specific key"""
         if key is not None and key in self.cache_data:
-            self.cache_data.move_tothe_end(key, last=False)
+            self.cache_data.move_to_end(key, last=False)
         return self.cache_data.get(key, None)
