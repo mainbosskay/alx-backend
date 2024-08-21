@@ -4,7 +4,7 @@ from base_caching import BaseCaching
 from collections import OrderedDict
 
 
-class LIFOCache(BaseCaching):
+class LRUCache(BaseCaching):
     """Class object for storing and getting items using LRU removal"""
     def __init__(self):
         """Initializing class for caching system"""
