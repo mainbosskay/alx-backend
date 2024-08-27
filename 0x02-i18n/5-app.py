@@ -36,7 +36,7 @@ def get_user() -> Union[Dict, None]:
 
 @app.before_request
 def before_request() -> None:
-    """Gtes and sets users before other functions"""
+    """Gets and sets users before other functions"""
     user = get_user()
     g.user = user
 
