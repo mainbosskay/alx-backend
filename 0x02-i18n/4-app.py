@@ -24,7 +24,7 @@ def get_locale() -> str:
     """Getting and return web page locale"""
     querypara =request.query_string.decode("utf-8").split("&")
     querydict = dict(map(
-        lambda k: (k if "=" in k else "{}=". format(k)).split("="),
+        lambda k: (k if "=" in k else "{}=".format(k)).split("="),
         querypara
     ))
     if "locale" in querydict:
